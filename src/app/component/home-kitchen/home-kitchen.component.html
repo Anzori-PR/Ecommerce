@@ -1,0 +1,19 @@
+<div class="container px-28 mx-auto mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <div *ngFor="let item of Home" class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">
+        <div class="relative">
+            <img src="{{item.picture}}" alt="{{ item.name }}" class="w-full h-64 object-cover rounded-t-lg">
+            <div class="absolute bottom-0 right-0 bg-black bg-opacity-50 text-white p-2 rounded-bl-lg">{{ item.stock }} pieces in stock</div>
+        </div>
+        <div class="p-6">
+            <p class="text-lg font-bold text-gray-800 mb-2">{{ item.name }}</p>
+            <p class="text-sm text-gray-600 mb-4">{{ item.description }}</p>
+            <p class="text-sm text-gray-600 mb-2">Category: <span class="font-semibold">{{ item.category }}</span></p>
+            <ul class="text-sm text-gray-600 mb-2">
+                <li class="list-disc ml-5">{{ item.features[0] }}</li>
+                <li class="list-disc ml-5">{{ item.features[1] }}</li>
+                <li class="list-disc ml-5">{{ item.features[2] }}</li>
+            </ul>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"[routerLink]="'/Home/details/' + item.id">Add to Cart</button>
+        </div>
+    </div>
+</div>

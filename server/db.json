@@ -1,0 +1,144 @@
+{
+  "products": [
+    {
+      "id": "0",
+      "name": "Smartphone X",
+      "description": "The Smartphone X is a powerful device with advanced features.",
+      "category": "Electronics",
+      "features": [
+        "5G Connectivity",
+        "High-resolution Camera",
+        "Long-lasting Battery"
+      ],
+      "stock": 25,
+      "picture": "https://media.wired.com/photos/6495d332daed59ebbf460ab4/16:9/w_1272,h_715,c_limit/Pixel-7A-Coral-Google-IO-2023-Crop-Gear.jpg",
+      "price": 95
+    },
+    {
+      "id": "1",
+      "name": "Laptop Y",
+      "description": "Laptop Y is a sleek and lightweight laptop perfect for professionals.",
+      "category": "Computers",
+      "features": [
+        "Intel Core Processor",
+        "SSD Storage",
+        "Full HD Display"
+      ],
+      "stock": 12,
+      "picture": "https://images.pexels.com/photos/18105/pexels-photo.jpg?cs=srgb&dl=pexels-karsten-madsen-18105.jpg&fm=jpg",
+      "price": 95
+    },
+    {
+      "id": "2",
+      "name": "Fitness Tracker Z",
+      "description": "Stay active and monitor your health with Fitness Tracker Z.",
+      "category": "Health & Fitness",
+      "features": [
+        "Heart Rate Monitor",
+        "Step Counter",
+        "Sleep Tracker"
+      ],
+      "stock": 50,
+      "picture": "https://www.pbtech.co.nz/imgprod/W/T/WTHMIX39869.jpg?h=2475471772",
+      "price": 95
+    },
+    {
+      "id": "3",
+      "name": "Wireless Earbuds A",
+      "description": "Enjoy music on the go with Wireless Earbuds A.",
+      "category": "Electronics",
+      "features": [
+        "Bluetooth Connectivity",
+        "Noise Cancellation",
+        "Long Battery Life"
+      ],
+      "stock": 30,
+      "picture": "https://www.yamaha.com/yamahavgn/PIM/Images/01-TW-E3B-Black-03_1fb09687cc38d06d4cb325ec931685c4.jpg",
+      "price": 95
+    },
+    {
+      "id": "4",
+      "name": "Coffee Maker B",
+      "description": "Start your day with a perfect cup of coffee from Coffee Maker B.",
+      "category": "Home & Kitchen",
+      "features": [
+        "Programmable Settings",
+        "Auto Shut-off",
+        "Large Capacity"
+      ],
+      "stock": 20,
+      "picture": "https://images.yummy.ph/yummy/uploads/2020/06/b-coffee-co-freshman-capsule-coffee-machine-001.jpg",
+      "price": 95
+    },
+    {
+      "id": "5",
+      "name": "Gaming Console C",
+      "description": "Experience immersive gaming with Gaming Console C.",
+      "category": "Electronics",
+      "features": [
+        "4K Graphics",
+        "Online Multiplayer",
+        "Large Game Library"
+      ],
+      "stock": 15,
+      "picture": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HRDG2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1698862793718",
+      "price": 95
+    },
+    {
+      "id": "6",
+      "name": "Smartwatch D",
+      "description": "Stay connected and organized with Smartwatch D.",
+      "category": "Electronics",
+      "features": [
+        "Fitness Tracking",
+        "Notifications",
+        "Customizable Faces"
+      ],
+      "stock": 18,
+      "picture": "https://cdn.webshopapp.com/shops/300672/files/423568818/image.jpg",
+      "price": 95
+    },
+    {
+      "id": "7",
+      "name": "Bluetooth Speaker E",
+      "description": "Bring your music anywhere with Bluetooth Speaker E.",
+      "category": "Electronics",
+      "features": [
+        "Wireless Connectivity",
+        "Waterproof",
+        "Long Battery Life"
+      ],
+      "stock": 22,
+      "picture": "https://www.sencor.com/getmedia/6770caad-d0be-4d0d-b5f0-01bbc4c1c555/35059169.jpg.aspx?width=2100&height=2100&ext=.jpg",
+      "price": 95
+    },
+    {
+      "id": "8",
+      "name": "Dumbbell Set F",
+      "description": "Build strength and tone muscles with Dumbbell Set F.",
+      "category": "Fitness",
+      "features": [
+        "Adjustable Weights",
+        "Non-slip Grip",
+        "Durable Construction"
+      ],
+      "stock": 35,
+      "picture": "https://i.ebayimg.com/images/g/--4AAOSwCBFkefww/s-l1200.jpg",
+      "price": 95
+    },
+    {
+      "id": "9",
+      "name": "Portable Charger G",
+      "description": "Never run out of battery with Portable Charger G.",
+      "category": "Electronics",
+      "features": [
+        "High Capacity",
+        "Fast Charging",
+        "Compact Design"
+      ],
+      "stock": 40,
+      "picture": "https://m.media-amazon.com/images/I/31Oxlw3PqMS._AC_.jpg",
+      "price": 95
+    }
+  ]
+}
