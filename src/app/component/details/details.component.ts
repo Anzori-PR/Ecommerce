@@ -8,10 +8,11 @@ import { DataService } from 'src/app/service/data.service';
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css']
 })
-export class DetailsComponent implements OnInit{
+export class DetailsComponent implements OnInit {
   id!: string;
   view: fetch[] = [];
-  constructor(private route : ActivatedRoute, private service : DataService) {}
+  added: boolean = false;
+  constructor(private route: ActivatedRoute, private service: DataService) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -21,9 +22,19 @@ export class DetailsComponent implements OnInit{
     this.service.getViewProduct(this.id).subscribe(
       res => {
         this.view = [res];
-        console.log(this.view);
       },
     )
-  
+
   }
+
+
+  addToCart(id: string) {
+    this.service.addToCart(id).subscribe(() => {
+      this.added = true;
+      setTimeout(() => {
+        this.added = false;
+      }, 3000);
+    });
+  }
+  
 }

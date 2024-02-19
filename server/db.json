@@ -99,20 +99,6 @@
       "price": 95
     },
     {
-      "id": "7",
-      "name": "Bluetooth Speaker E",
-      "description": "Bring your music anywhere with Bluetooth Speaker E.",
-      "category": "Electronics",
-      "features": [
-        "Wireless Connectivity",
-        "Waterproof",
-        "Long Battery Life"
-      ],
-      "stock": 22,
-      "picture": "https://www.sencor.com/getmedia/6770caad-d0be-4d0d-b5f0-01bbc4c1c555/35059169.jpg.aspx?width=2100&height=2100&ext=.jpg",
-      "price": 95
-    },
-    {
       "id": "8",
       "name": "Dumbbell Set F",
       "description": "Build strength and tone muscles with Dumbbell Set F.",
@@ -139,6 +125,32 @@
       "stock": 40,
       "picture": "https://m.media-amazon.com/images/I/31Oxlw3PqMS._AC_.jpg",
       "price": 95
+    }
+  ],
+  "cart": [
+    {
+      "id": "2"
+    },
+    {
+      "id": "2"
+    },
+    {
+      "id": "8"
+    },
+    {
+      "id": "2"
+    },
+    {
+      "id": "2"
+    },
+    {
+      "id": "4"
+    },
+    {
+      "id": "4"
+    },
+    {
+      "id": "4"
     }
   ]
 }

@@ -11,6 +11,8 @@ import { ComputersComponent } from './component/computers/computers.component';
 import { HeaderComponent } from './component/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailsComponent } from './component/details/details.component';
+import { CartComponent } from './component/cart/cart.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,14 @@ import { DetailsComponent } from './component/details/details.component';
     ComputersComponent,
     HeaderComponent,
     DetailsComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
