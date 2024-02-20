@@ -57,7 +57,6 @@ export class CartComponent implements OnInit {
   getWholeTotalPrice(): number {
     let totalPrice = 0;
     for (const item of this.cartItems) {
-      console.log(item.price)
       totalPrice += item.price;
     }
     return totalPrice;

@@ -65,4 +65,5 @@ export class DataService {
   deleteCartItem(id: string): Observable<'id'> {
     return this.httpClient.delete<'id'>(`${this.urlCart}/${id}`);
   }
+
 }
