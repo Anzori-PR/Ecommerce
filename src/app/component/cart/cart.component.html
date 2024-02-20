@@ -1,0 +1,33 @@
+<div class="container px-10 mx-auto mt-10">
+    <h2 class="text-2xl font-bold mb-4">Shopping Cart</h2>
+    <div class="flex">
+        <div class="flex flex-col gap-4 w-3/5">
+            <div *ngFor="let item of cartItems" class="flex items-center border-b border-gray-300 p-2 rounded-lg"
+                style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+                <div class="w-40 mr-8">
+                    <img [src]="item.picture" [alt]="item.name" class="w-full object-contain aspect-square">
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold">{{ item.name }}</h3>
+                    <p class="text-gray-600">{{ item.description }}</p>
+                </div>
+                <span class="w-80 text-red-700 ">{{this.message}}</span>
+                <div class="w-full flex items-center justify-end gap-6">
+                    <input type="text" class="w-7 border-none" [value]="cartCounts[item.id]">
+
+                    <div class="w-auto flex gap-2">
+                        <span class="w-8 h-8 bg-slate-500 rounded-md text-center text-xl text-white cursor-pointer" (click)="add(item.id)">+</span>
+                        <span class="w-8 h-8 bg-slate-500 rounded-md text-center text-xl text-white cursor-pointer" (click)="minus(item.id)">-</span>
+                    </div>
+
+                    <span class="price"> {{ getTotalPrice(item.id) }}$ </span>
+
+                    <span (click)="deleteProduct(item.id)" class="text-red-600 cursor-pointer">Delete</span>
+                </div>
+            </div>
+        </div>
+        <div class="w-2/5 flex justify-center">
+            <h1>Total: {{getWholeTotalPrice()}}$</h1>
+        </div>
+    </div>
+</div>

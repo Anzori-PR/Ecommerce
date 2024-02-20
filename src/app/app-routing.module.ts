@@ -6,6 +6,7 @@ import { ComputersComponent } from './component/computers/computers.component';
 import { HealthFitnessComponent } from './component/health-fitness/health-fitness.component';
 import { ElectronicsComponent } from './component/electronics/electronics.component';
 import { DetailsComponent } from './component/details/details.component';
+import { CartComponent } from './component/cart/cart.component';
 
 const routes: Routes = [
   {path: '', redirectTo : 'Home', pathMatch : 'full'},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path: 'Home/Computers', component : ComputersComponent},
   {path: 'Home/Health&Fitness', component : HealthFitnessComponent},
   {path: 'Home/Electronics', component : ElectronicsComponent},
+  {path: 'Home/Cart', component : CartComponent},
   {path: 'Home/details/:id', component : DetailsComponent},
 ];
 

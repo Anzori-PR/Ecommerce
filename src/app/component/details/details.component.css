@@ -1,0 +1,16 @@
+.close-animation {
+    height: 3px;
+    animation-name: close;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes close {
+    from {
+      width: 100%;
+    }
+    to {
+      width: 0%;
+    }
+  }
+  
