@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { fetch } from 'src/app/fetch.interface';
 import { DataService } from 'src/app/service/data.service';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-cart',
@@ -12,6 +13,8 @@ export class CartComponent implements OnInit {
   ids: string[] = [];
   cartCounts: { [id: string]: number } = {};
   message: string = '';
+
+  faTrash = faTrash;
 
   constructor(private service: DataService) { }
 
