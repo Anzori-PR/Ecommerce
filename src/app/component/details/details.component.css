@@ -3,6 +3,7 @@
     animation-name: close;
     animation-duration: 3s;
     animation-fill-mode: forwards;
+    
   }
   
   @keyframes close {

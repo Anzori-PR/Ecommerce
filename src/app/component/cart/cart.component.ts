@@ -13,6 +13,7 @@ export class CartComponent implements OnInit {
   ids: string[] = [];
   cartCounts: { [id: string]: number } = {};
   message: string = '';
+  wholeCount!: number;
 
   faTrash = faTrash;
 
@@ -38,6 +39,7 @@ export class CartComponent implements OnInit {
     for (let i = 0; i < productCount; i++) {
       this.service.deleteCartItem(id).subscribe(() => {
         this.cartItems = this.cartItems.filter(item => item.id !== id);
+        window.location.reload();
       });
     }
   }
@@ -45,26 +47,29 @@ export class CartComponent implements OnInit {
 
   getTotalPrice(id: string): number {
     const productCount = this.cartCounts[id];
-    let totalPrice = 0;
+    let count = 0;
     for (const item of this.cartItems) {
       if (item.id === id) {
-        totalPrice += item.price * productCount;
+        count += item.price * productCount;
       }
     }
-    return totalPrice;
+    
+    return count;
   }
+
 
   getWholeTotalPrice(): number {
-    let totalPrice = 0;
-    for (const item of this.cartItems) {
-      console.log(item.price)
-      totalPrice += item.price;
-    }
-    return totalPrice;
+    let wholeTotal = 0;
+  
+    this.cartItems.forEach(item => {
+      const productCount = this.cartCounts[item.id];
+      wholeTotal += item.price * productCount;
+    });
+  
+    return wholeTotal;
   }
   
-
-
+  
   add(id: string) {
     const item = this.cartItems.find(item => item.id === id);
     const number = this.cartCounts[id];

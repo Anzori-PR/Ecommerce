@@ -33,6 +33,7 @@ export class DetailsComponent implements OnInit {
       this.added = true;
       setTimeout(() => {
         this.added = false;
+        window.location.reload();
       }, 3000);
     });
   }
