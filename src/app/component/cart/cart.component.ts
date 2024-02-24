@@ -12,7 +12,6 @@ export class CartComponent implements OnInit {
   cartItems: fetch[] = [];
   ids: string[] = [];
   cartCounts: { [id: string]: number } = {};
-  message: string = '';
   wholeCount!: number;
 
   faTrash = faTrash;
@@ -75,12 +74,9 @@ export class CartComponent implements OnInit {
     const number = this.cartCounts[id];
 
     if (item && this.cartCounts[id] < item.stock) {
-      this.message = '';
       this.service.addToCart(id).subscribe(() => {
         this.cartCounts[id] = number + 1;
       });
-    }else {
-      this.message = "There is no more items in the stock";
     }
   }
   
@@ -89,12 +85,9 @@ export class CartComponent implements OnInit {
     const number = this.cartCounts[id];
 
     if (item && this.cartCounts[id] > 1) {
-      this.message = '';
       this.service.deleteCartItem(id).subscribe(() => {
         this.cartCounts[id] = number - 1;
       });
-    } else {
-      this.message = "Invalid quantity or item not found";
     }
   }
   
