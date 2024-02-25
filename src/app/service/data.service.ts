@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams  } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { BehaviorSubject, Observable, map, tap } from 'rxjs';
 import { fetch } from '../fetch.interface';
+import { tick } from '@angular/core/testing';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +12,15 @@ export class DataService {
   url: string;
   urlCart: string;
 
-  constructor(private httpClient: HttpClient) { 
+  public productCount = new BehaviorSubject<number>(0);
+
+  constructor(private httpClient: HttpClient) {
     this.url = 'http://localhost:3000/products';
     this.urlCart = 'http://localhost:3000/cart';
   }
 
-  getData() : Observable<fetch[]>{
+
+  getData(): Observable<fetch[]> {
     return this.httpClient.get<fetch[]>(this.url);
   }
 
@@ -49,7 +53,12 @@ export class DataService {
   }
 
   addToCart(id: string): Observable<fetch> {
-    return this.httpClient.post<fetch>(this.urlCart, {id});
+    return this.httpClient.post<fetch>(this.urlCart, { id }).pipe(
+      tap(() => {
+        // Increment product count when adding to cart
+        this.productCount.next(this.productCount.value + 1);
+      })
+    );
   }
 
   getAddToCartData(): Observable<fetch[]> {

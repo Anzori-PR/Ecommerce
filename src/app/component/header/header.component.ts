@@ -4,7 +4,9 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { filter } from 'rxjs';
+import { fetch } from 'src/app/fetch.interface';
 import { DataService } from 'src/app/service/data.service';
+import { DetailsComponent } from '../details/details.component';
 
 @Component({
   selector: 'app-header',
@@ -15,7 +17,7 @@ export class HeaderComponent implements OnInit {
   faShoppingCart = faShoppingCart;
   faBars = faBars;
   faXmark = faXmark;
-  product!: number;
+  product: number = 0;
   id: string[] = [];
   ActiveRoute: string = '';
   sideMenu: boolean = false;
@@ -35,9 +37,14 @@ export class HeaderComponent implements OnInit {
       this.id = res.map(item => item.id);
 
       this.service.getCartProducts(this.id).subscribe(products => {
-        this.product = products.length;
+        // this.product = products.length;
+        this.service.productCount.subscribe(count => {
+          this.product = count + products.length;
+        });
       });
     })
+
+
   }
 
   menuOpen() {

@@ -12,6 +12,8 @@ export class DetailsComponent implements OnInit {
   id!: string;
   view: fetch[] = [];
   added: boolean = false;
+  counter: number = 0;
+  cartData: fetch[] = [];
   constructor(private route: ActivatedRoute, private service: DataService) { }
 
   ngOnInit(): void {
@@ -27,15 +29,13 @@ export class DetailsComponent implements OnInit {
 
   }
 
-
   addToCart(id: string) {
     this.service.addToCart(id).subscribe(() => {
       this.added = true;
       setTimeout(() => {
         this.added = false;
-        window.location.reload();
       }, 3000);
-    });
+    })
   }
-  
+
 }

@@ -13,6 +13,7 @@ export class CartComponent implements OnInit {
   ids: string[] = [];
   cartCounts: { [id: string]: number } = {};
   wholeCount!: number;
+  checkoutText: boolean = false;
 
   faTrash = faTrash;
 
@@ -74,9 +75,7 @@ export class CartComponent implements OnInit {
     const number = this.cartCounts[id];
 
     if (item && this.cartCounts[id] < item.stock) {
-      this.service.addToCart(id).subscribe(() => {
         this.cartCounts[id] = number + 1;
-      });
     }
   }
   
@@ -85,10 +84,12 @@ export class CartComponent implements OnInit {
     const number = this.cartCounts[id];
 
     if (item && this.cartCounts[id] > 1) {
-      this.service.deleteCartItem(id).subscribe(() => {
         this.cartCounts[id] = number - 1;
-      });
     }
+  }
+
+  checkout() {
+    this.checkoutText = !this.checkoutText;
   }
   
 }
