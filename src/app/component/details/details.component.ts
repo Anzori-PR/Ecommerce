@@ -12,6 +12,8 @@ export class DetailsComponent implements OnInit {
   id!: string;
   view: fetch[] = [];
   added: boolean = false;
+  counter: number = 0;
+  cartData: fetch[] = [];
   constructor(private route: ActivatedRoute, private service: DataService) { }
 
   ngOnInit(): void {
