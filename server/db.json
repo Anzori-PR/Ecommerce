@@ -1,162 +1,285 @@
 {
   "products": [
     {
-      "id": "0",
-      "name": "Smartphone X",
-      "description": "The Smartphone X is a powerful device with advanced features.",
+      "id": "7",
+      "name": "Bluetooth Speaker H",
+      "description": "Enjoy your favorite music with high-quality sound from Bluetooth Speaker H.",
       "category": "Electronics",
       "features": [
-        "5G Connectivity",
-        "High-resolution Camera",
-        "Long-lasting Battery"
-      ],
-      "stock": 25,
-      "picture": "https://media.wired.com/photos/6495d332daed59ebbf460ab4/16:9/w_1272,h_715,c_limit/Pixel-7A-Coral-Google-IO-2023-Crop-Gear.jpg",
-      "price": 95
-    },
-    {
-      "id": "1",
-      "name": "Laptop Y",
-      "description": "Laptop Y is a sleek and lightweight laptop perfect for professionals.",
-      "category": "Computers",
-      "features": [
-        "Intel Core Processor",
-        "SSD Storage",
-        "Full HD Display"
-      ],
-      "stock": 12,
-      "picture": "https://images.pexels.com/photos/18105/pexels-photo.jpg?cs=srgb&dl=pexels-karsten-madsen-18105.jpg&fm=jpg",
-      "price": 95
-    },
-    {
-      "id": "2",
-      "name": "Fitness Tracker Z",
-      "description": "Stay active and monitor your health with Fitness Tracker Z.",
-      "category": "Health & Fitness",
-      "features": [
-        "Heart Rate Monitor",
-        "Step Counter",
-        "Sleep Tracker"
-      ],
-      "stock": 50,
-      "picture": "https://www.pbtech.co.nz/imgprod/W/T/WTHMIX39869.jpg?h=2475471772",
-      "price": 95
-    },
-    {
-      "id": "3",
-      "name": "Wireless Earbuds A",
-      "description": "Enjoy music on the go with Wireless Earbuds A.",
-      "category": "Electronics",
-      "features": [
-        "Bluetooth Connectivity",
-        "Noise Cancellation",
+        "Wireless Connectivity",
+        "Waterproof",
         "Long Battery Life"
       ],
-      "stock": 30,
-      "picture": "https://www.yamaha.com/yamahavgn/PIM/Images/01-TW-E3B-Black-03_1fb09687cc38d06d4cb325ec931685c4.jpg",
+      "stock": 22,
+      "picture": "https://m.media-amazon.com/images/I/61ZKtfwGOHL._AC_SL1000_.jpg",
       "price": 95
     },
     {
-      "id": "4",
-      "name": "Coffee Maker B",
-      "description": "Start your day with a perfect cup of coffee from Coffee Maker B.",
+      "id": "10",
+      "name": "Air Purifier I",
+      "description": "Breathe cleaner air with Air Purifier I, perfect for your home or office.",
       "category": "Home & Kitchen",
       "features": [
-        "Programmable Settings",
-        "Auto Shut-off",
-        "Large Capacity"
-      ],
-      "stock": 20,
-      "picture": "https://images.yummy.ph/yummy/uploads/2020/06/b-coffee-co-freshman-capsule-coffee-machine-001.jpg",
-      "price": 95
-    },
-    {
-      "id": "5",
-      "name": "Gaming Console C",
-      "description": "Experience immersive gaming with Gaming Console C.",
-      "category": "Electronics",
-      "features": [
-        "4K Graphics",
-        "Online Multiplayer",
-        "Large Game Library"
-      ],
-      "stock": 15,
-      "picture": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/HRDG2?wid=1144&hei=1144&fmt=jpeg&qlt=90&.v=1698862793718",
-      "price": 95
-    },
-    {
-      "id": "6",
-      "name": "Smartwatch D",
-      "description": "Stay connected and organized with Smartwatch D.",
-      "category": "Electronics",
-      "features": [
-        "Fitness Tracking",
-        "Notifications",
-        "Customizable Faces"
-      ],
-      "stock": 18,
-      "picture": "https://cdn.webshopapp.com/shops/300672/files/423568818/image.jpg",
-      "price": 95
-    },
-    {
-      "id": "8",
-      "name": "Dumbbell Set F",
-      "description": "Build strength and tone muscles with Dumbbell Set F.",
-      "category": "Fitness",
-      "features": [
-        "Adjustable Weights",
-        "Non-slip Grip",
-        "Durable Construction"
-      ],
-      "stock": 35,
-      "picture": "https://i.ebayimg.com/images/g/--4AAOSwCBFkefww/s-l1200.jpg",
-      "price": 95
-    },
-    {
-      "id": "9",
-      "name": "Portable Charger G",
-      "description": "Never run out of battery with Portable Charger G.",
-      "category": "Electronics",
-      "features": [
-        "High Capacity",
-        "Fast Charging",
+        "HEPA Filter",
+        "Quiet Operation",
         "Compact Design"
       ],
-      "stock": 40,
-      "picture": "https://m.media-amazon.com/images/I/31Oxlw3PqMS._AC_.jpg",
+      "stock": 28,
+      "picture": "https://images-na.ssl-images-amazon.com/images/I/71%2BkVaO1vcL._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "11",
+      "name": "Yoga Mat J",
+      "description": "Practice yoga comfortably with Yoga Mat J, made from eco-friendly materials.",
+      "category": "Fitness",
+      "features": [
+        "Non-slip Surface",
+        "Lightweight",
+        "Easy to Clean"
+      ],
+      "stock": 33,
+      "picture": "https://m.media-amazon.com/images/I/81vFNN8dUvL._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "12",
+      "name": "Digital Camera K",
+      "description": "Capture every moment with clarity using Digital Camera K.",
+      "category": "Electronics",
+      "features": [
+        "High-resolution Sensor",
+        "Zoom Lens",
+        "4K Video Recording"
+      ],
+      "stock": 17,
+      "picture": "https://m.media-amazon.com/images/I/81CsrqZ0rVL._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "13",
+      "name": "Electric Toothbrush L",
+      "description": "Keep your teeth clean and healthy with Electric Toothbrush L.",
+      "category": "Health & Fitness",
+      "features": [
+        "Rotating Brush Head",
+        "Built-in Timer",
+        "Rechargeable"
+      ],
+      "stock": 26,
+      "picture": "https://images-na.ssl-images-amazon.com/images/I/71eA%2BxrtJpL._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "14",
+      "name": "Robot Vacuum Cleaner M",
+      "description": "Keep your floors clean effortlessly with Robot Vacuum Cleaner M.",
+      "category": "Home & Kitchen",
+      "features": [
+        "Smart Navigation",
+        "Automatic Charging",
+        "Multiple Cleaning Modes"
+      ],
+      "stock": 19,
+      "picture": "https://m.media-amazon.com/images/I/71ZxlVsVGUL._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "15",
+      "name": "Wireless Charging Pad N",
+      "description": "Charge your devices wirelessly with Wireless Charging Pad N.",
+      "category": "Electronics",
+      "features": [
+        "Qi Compatibility",
+        "Fast Charging",
+        "Slim Design"
+      ],
+      "stock": 24,
+      "picture": "https://m.media-amazon.com/images/I/81PJPEsW1GL._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "16",
+      "name": "Resistance Bands Set O",
+      "description": "Work out anywhere with Resistance Bands Set O, perfect for strength training.",
+      "category": "Fitness",
+      "features": [
+        "Multiple Resistance Levels",
+        "Portable",
+        "Versatile"
+      ],
+      "stock": 31,
+      "picture": "https://m.media-amazon.com/images/I/61XOrH-4-9L._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "17",
+      "name": "Smart Scale P",
+      "description": "Track your weight and body composition with Smart Scale P.",
+      "category": "Health & Fitness",
+      "features": [
+        "Bluetooth Connectivity",
+        "Multiple User Profiles",
+        "High Precision Sensors"
+      ],
+      "stock": 27,
+      "picture": "https://m.media-amazon.com/images/I/71YW8q6wkWL._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "18",
+      "name": "Portable Blender Q",
+      "description": "Blend your favorite smoothies on the go with Portable Blender Q.",
+      "category": "Home & Kitchen",
+      "features": [
+        "Rechargeable Battery",
+        "BPA-free",
+        "Compact Size"
+      ],
+      "stock": 23,
+      "picture": "https://m.media-amazon.com/images/I/61v1JY0-Z8L._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "19",
+      "name": "Smart Doorbell R",
+      "description": "Enhance your home security with Smart Doorbell R, featuring live video streaming and motion detection.",
+      "category": "Home & Kitchen",
+      "features": [
+        "HD Video",
+        "Two-Way Audio",
+        "Night Vision"
+      ],
+      "stock": 16,
+      "picture": "https://m.media-amazon.com/images/I/61YbXR8snJL._AC_SL1000_.jpg",
+      "price": 95
+    },
+    {
+      "id": "20",
+      "name": "Cordless Vacuum Cleaner S",
+      "description": "Clean your home with ease using Cordless Vacuum Cleaner S, lightweight and powerful.",
+      "category": "Home & Kitchen",
+      "features": [
+        "Lithium-ion Battery",
+        "HEPA Filtration",
+        "Convertible Design"
+      ],
+      "stock": 21,
+      "picture": "https://m.media-amazon.com/images/I/71YH8U6J-zL._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "21",
+      "name": "Smart Thermostat T",
+      "description": "Efficiently manage your home's temperature with Smart Thermostat T, programmable and energy-saving.",
+      "category": "Home & Kitchen",
+      "features": [
+        "Wi-Fi Connectivity",
+        "Touchscreen Display",
+        "Voice Control"
+      ],
+      "stock": 18,
+      "picture": "https://m.media-amazon.com/images/I/61jsf4Ry1FL._AC_SL1000_.jpg",
+      "price": 95
+    },
+    {
+      "id": "22",
+      "name": "Air Fryer U",
+      "description": "Enjoy crispy and healthy meals with Air Fryer U, using little to no oil.",
+      "category": "Home & Kitchen",
+      "features": [
+        "Large Capacity",
+        "Digital Controls",
+        "Dishwasher Safe"
+      ],
+      "stock": 25,
+      "picture": "https://m.media-amazon.com/images/I/81N4AE9W0bL._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "23",
+      "name": "Gaming Mouse V",
+      "description": "Dominate your games with Gaming Mouse V, featuring customizable buttons and high DPI.",
+      "category": "Electronics",
+      "features": [
+        "Programmable Buttons",
+        "RGB Lighting",
+        "Precision Sensor"
+      ],
+      "stock": 20,
+      "picture": "https://m.media-amazon.com/images/I/71hPnkz3e6L._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "24",
+      "name": "Digital Kitchen Scale W",
+      "description": "Precisely measure ingredients with Digital Kitchen Scale W, featuring an easy-to-read LCD display.",
+      "category": "Home & Kitchen",
+      "features": [
+        "Tare Function",
+        "Unit Conversion",
+        "Sleek Design"
+      ],
+      "stock": 30,
+      "picture": "https://m.media-amazon.com/images/I/71GmE8HWK-L._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "25",
+      "name": "Bluetooth Headphones X",
+      "description": "Enjoy immersive sound with Bluetooth Headphones X, featuring active noise cancellation.",
+      "category": "Electronics",
+      "features": [
+        "Over-Ear Design",
+        "Long Battery Life",
+        "Foldable Design"
+      ],
+      "stock": 28,
+      "picture": "https://m.media-amazon.com/images/I/61zbocBdgSL._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "26",
+      "name": "Smart Plug Y",
+      "description": "Control your appliances remotely with Smart Plug Y, compatible with voice assistants.",
+      "category": "Electronics",
+      "features": [
+        "Wi-Fi Connectivity",
+        "Scheduling",
+        "Energy Monitoring"
+      ],
+      "stock": 23,
+      "picture": "https://m.media-amazon.com/images/I/61Lq5yE6otL._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "27",
+      "name": "Electric Kettle Z",
+      "description": "Boil water quickly and efficiently with Electric Kettle Z, featuring auto shut-off and boil-dry protection.",
+      "category": "Home & Kitchen",
+      "features": [
+        "Fast Boiling",
+        "Stainless Steel Construction",
+        "Cordless Design"
+      ],
+      "stock": 26,
+      "picture": "https://m.media-amazon.com/images/I/71p0NMMtd-L._AC_SL1500_.jpg",
+      "price": 95
+    },
+    {
+      "id": "28",
+      "name": "Fitness Tracker AA",
+      "description": "Track your workouts and monitor your health with Fitness Tracker AA, featuring a color display and waterproof design.",
+      "category": "Health & Fitness",
+      "features": [
+        "Heart Rate Monitoring",
+        "Sleep Tracking",
+        "Activity Tracking"
+      ],
+      "stock": 19,
+      "picture": "https://m.media-amazon.com/images/I/71bFOaaxQqL._AC_SL1500_.jpg",
       "price": 95
     }
   ],
-  "cart": [
-    {
-      "id": "4"
-    },
-    {
-      "id": "2"
-    },
-    {
-      "id": "4"
-    },
-    {
-      "id": "4"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "9"
-    },
-    {
-      "id": "1"
-    },
-    {
-      "id": "0"
-    },
-    {
-      "id": "0"
-    },
-    {
-      "id": "8"
-    }
-  ]
+  "cart": []
 }

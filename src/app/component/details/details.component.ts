@@ -29,15 +29,13 @@ export class DetailsComponent implements OnInit {
 
   }
 
-
   addToCart(id: string) {
     this.service.addToCart(id).subscribe(() => {
       this.added = true;
       setTimeout(() => {
         this.added = false;
-        window.location.reload();
       }, 3000);
-    });
+    })
   }
-  
+
 }

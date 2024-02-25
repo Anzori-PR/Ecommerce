@@ -3,7 +3,9 @@
     <div class="flex flex-col lg:flex-row">
         <!-- Added Product -->
         <div style="height: 70vh; scrollbar-width:none;" class="lg:w-3/5 overflow-hidden overflow-y-scroll">
-            <div *ngFor="let item of cartItems" class="flex flex-col lg:flex-row items-center border-b border-gray-300 p-4 rounded-lg mb-5 lg:mb-4 mx-5" style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
+            <div *ngFor="let item of cartItems"
+                class="flex flex-col lg:flex-row items-center border-b border-gray-300 p-4 rounded-lg mb-5 lg:mb-4 mx-5"
+                style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
                 <div class="w-full lg:w-1/4 mr-0 lg:mr-4">
                     <img [src]="item.picture" [alt]="item.name" loading="lazy" class="w-full h-auto">
                 </div>
@@ -13,19 +15,27 @@
                 </div>
                 <div class="w-full lg:w-1/3 flex items-center justify-between mt-2 lg:mt-0">
                     <div class="flex gap-1">
-                        <span class="w-8 h-8 bg-slate-500 rounded-md text-center text-xl text-white cursor-pointer" (click)="add(item.id)">+</span>
+                        <span class="w-8 h-8 bg-slate-500 rounded-md text-center text-xl text-white cursor-pointer"
+                            (click)="add(item.id)">+</span>
                         <input type="text" class="w-5 lg:w-7 border-none text-center" [value]="cartCounts[item.id]">
-                        <span class="w-8 h-8 bg-slate-500 rounded-md text-center text-xl text-white cursor-pointer" (click)="minus(item.id)">-</span>
+                        <span class="w-8 h-8 bg-slate-500 rounded-md text-center text-xl text-white cursor-pointer"
+                            (click)="minus(item.id)">-</span>
                     </div>
                     <span class="price text-xl lg:text-xl font-bold">{{ getTotalPrice(item.id) }}$</span>
-                    <span (click)="deleteProduct(item.id)" class="text-red-700 cursor-pointer"><fa-icon class="text-xl" [icon]="faTrash"></fa-icon></span>
+                    <span (click)="deleteProduct(item.id)" class="text-red-700 cursor-pointer"><fa-icon class="text-xl"
+                            [icon]="faTrash"></fa-icon></span>
                 </div>
             </div>
         </div>
 
         <!-- Total Price -->
-        <div class="lg:w-2/5 flex justify-center items-center mt-4 lg:mt-0">
+        <div class="lg:w-2/5 h-40 flex flex-col justify-evenly items-center mt-4 lg:mt-0">
             <h1 class="text-xl lg:text-2xl font-bold">Total: {{getWholeTotalPrice()}}$</h1>
+            <button (click)="checkout()"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold w-full h-10 md:w-2/5 py-4 md:py-1 px-4 md:px-2 rounded-full focus:outline-none focus:shadow-outline">
+                Checkout
+            </button>
+            <span *ngIf="checkoutText" class="text-xl text-red-600 text-center">Sorry This Function Isn't Working yet</span>
         </div>
     </div>
 </div>

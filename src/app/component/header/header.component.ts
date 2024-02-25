@@ -37,9 +37,14 @@ export class HeaderComponent implements OnInit {
       this.id = res.map(item => item.id);
 
       this.service.getCartProducts(this.id).subscribe(products => {
-        this.product = products.length;
+        // this.product = products.length;
+        this.service.productCount.subscribe(count => {
+          this.product = count + products.length;
+        });
       });
     })
+
+
   }
 
   menuOpen() {
