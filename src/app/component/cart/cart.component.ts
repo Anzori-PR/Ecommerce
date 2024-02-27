@@ -14,6 +14,9 @@ export class CartComponent implements OnInit {
   cartCounts: { [id: string]: number } = {};
   wholeCount!: number;
   checkoutText: boolean = false;
+  message!: string;
+
+  mdg = 'jello';
 
   faTrash = faTrash;
 
@@ -30,6 +33,10 @@ export class CartComponent implements OnInit {
 
       this.service.getCartProducts(this.ids).subscribe(products => {
         this.cartItems = products;
+
+        if(products.length < 1) {
+          this.message = "Cart is empty!"
+        }
       });
     });
   }
