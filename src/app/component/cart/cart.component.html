@@ -3,11 +3,12 @@
     <div class="flex flex-col lg:flex-row">
         <!-- Added Product -->
         <div style="height: 70vh; scrollbar-width:none;" class="lg:w-3/5 overflow-hidden overflow-y-scroll">
+            <span class="flex justify-center text-orange-700">{{message}}</span>
             <div *ngFor="let item of cartItems"
                 class="flex flex-col lg:flex-row items-center border-b border-gray-300 p-4 rounded-lg mb-5 lg:mb-4 mx-5"
                 style="box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;">
                 <div class="w-full lg:w-1/4 mr-0 lg:mr-4">
-                    <img [src]="item.picture" [alt]="item.name" loading="lazy" class="w-full h-auto">
+                    <img [src]="item.picture" [alt]="item.name" loading="lazy" class="h-auto object-center lg:h-28">
                 </div>
                 <div class="flex-1 lg:mr-4 mt-2 lg:mt-0">
                     <h3 class="text-lg lg:text-xl font-bold">{{ item.name }}</h3>
@@ -32,7 +33,7 @@
         <div class="lg:w-2/5 h-40 flex flex-col justify-evenly items-center mt-4 lg:mt-0">
             <h1 class="text-xl lg:text-2xl font-bold">Total: {{getWholeTotalPrice()}}$</h1>
             <button (click)="checkout()"
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold w-full h-10 md:w-2/5 py-4 md:py-1 px-4 md:px-2 rounded-full focus:outline-none focus:shadow-outline">
+                class="bg-blue-500 hover:bg-blue-700 flex justify-center items-center text-white font-bold w-full h-10 md:w-2/5 py-4 md:py-1 px-4 md:px-2 rounded-full focus:outline-none focus:shadow-outline">
                 Checkout
             </button>
             <span *ngIf="checkoutText" class="text-xl text-red-600 text-center">Sorry This Function Isn't Working yet</span>
