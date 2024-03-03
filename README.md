@@ -1,4 +1,6 @@
 # Project
+Due to limitations, I am unable to deploy the `db.json` file. However, for visualization purposes, images are provided to showcase the content.
+ 
 ![image](https://github.com/Anzori-PR/eCommerce/assets/113595336/20bc9786-b106-47b3-95d1-95e471cae5b8)
 
 ![image](https://github.com/Anzori-PR/eCommerce/assets/113595336/881f67ea-f04c-4bd0-8c27-a54abb4f50d8)
