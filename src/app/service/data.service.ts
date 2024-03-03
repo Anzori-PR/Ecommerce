@@ -15,8 +15,8 @@ export class DataService {
   public productCount = new BehaviorSubject<number>(0);
 
   constructor(private httpClient: HttpClient) {
-    this.url = '/api/products';
-    this.urlCart = '/api/cart';
+    this.url = 'http://localhost:3000/products';
+    this.urlCart = 'http://localhost:3000/cart';
   }
 
 
