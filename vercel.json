@@ -1,8 +1,14 @@
 {
-    "functions": {
-      "server.js": {
-        "runtime": "vercel-node@0.12"
+    "routes": [
+      { "handle": "filesystem" },
+      {
+        "src": "/api/(.*)",
+        "dest": "server.js"
+      },
+      {
+        "src": ".*",
+        "dest": "index.html"
       }
-    }
+    ]
   }
   
