@@ -7,6 +7,6 @@ const router = jsonServer.router('./db.json');
 const middlewares = jsonServer.defaults();
 
 app.use(middlewares);
-app.use('/api', router);
+app.use(router);
 
 module.exports = app;
