@@ -18,4 +18,6 @@ export class DashboardComponent implements OnInit{
       this.Data = res;
     })
   }
+
+  
 }
