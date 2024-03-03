@@ -1,5 +1,10 @@
 # Project
-![Screenshot 2024-03-03 at 23-45-17 Project](https://github.com/Anzori-PR/eCommerce/assets/113595336/22101768-e60e-485b-8094-5884ed78f91c)
+![image](https://github.com/Anzori-PR/eCommerce/assets/113595336/20bc9786-b106-47b3-95d1-95e471cae5b8)
+
+![image](https://github.com/Anzori-PR/eCommerce/assets/113595336/881f67ea-f04c-4bd0-8c27-a54abb4f50d8)
+![image](https://github.com/Anzori-PR/eCommerce/assets/113595336/75c7f34e-b87e-493d-bd94-be28a134849f)
+
+
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
