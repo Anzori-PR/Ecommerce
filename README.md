@@ -1,4 +1,6 @@
 # Project
+![Screenshot 2024-03-03 at 23-45-17 Project](https://github.com/Anzori-PR/eCommerce/assets/113595336/22101768-e60e-485b-8094-5884ed78f91c)
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
 
