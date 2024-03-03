@@ -6,5 +6,5 @@ export interface fetch {
     features: string,
     stock: number,
     picture: string,
-    price: number
+    price: number,
 }

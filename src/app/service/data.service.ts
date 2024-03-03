@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable, map, tap } from 'rxjs';
 import { fetch } from '../fetch.interface';
-import { tick } from '@angular/core/testing';
 
 @Injectable({
   providedIn: 'root'
@@ -15,35 +14,34 @@ export class DataService {
   public productCount = new BehaviorSubject<number>(0);
 
   constructor(private httpClient: HttpClient) {
-    this.url = 'http://localhost:3000/products';
-    this.urlCart = 'http://localhost:3000/cart';
+    this.url = 'http://localhost:3000/products'; // Your API link here
+    this.urlCart = 'http://localhost:3000/cart'; // Your API link here for cart
   }
-
 
   getData(): Observable<fetch[]> {
     return this.httpClient.get<fetch[]>(this.url);
   }
 
   getComputers(): Observable<fetch[]> {
-    return this.httpClient.get<fetch[]>(this.url).pipe(
+    return this.getData().pipe(
       map(data => data.filter(item => item.category === 'Computers'))
     );
   }
 
   getHealth(): Observable<fetch[]> {
-    return this.httpClient.get<fetch[]>(this.url).pipe(
+    return this.getData().pipe(
       map(data => data.filter(item => item.category === 'Health & Fitness'))
     );
   }
 
   getElectronics(): Observable<fetch[]> {
-    return this.httpClient.get<fetch[]>(this.url).pipe(
+    return this.getData().pipe(
       map(data => data.filter(item => item.category === 'Electronics'))
     );
   }
 
   getHomeKitchen(): Observable<fetch[]> {
-    return this.httpClient.get<fetch[]>(this.url).pipe(
+    return this.getData().pipe(
       map(data => data.filter(item => item.category === 'Home & Kitchen'))
     );
   }
@@ -66,7 +64,7 @@ export class DataService {
   }
 
   getCartProducts(ids: string[]): Observable<fetch[]> {
-    return this.httpClient.get<fetch[]>(this.url).pipe(
+    return this.getData().pipe(
       map(data => data.filter(item => ids.includes(item.id)))
     );
   }
