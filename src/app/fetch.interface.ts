@@ -7,4 +7,5 @@ export interface fetch {
     stock: number,
     picture: string,
     price: number,
+    products: any,
 }

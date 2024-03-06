@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, map, of, tap } from 'rxjs';
+import { BehaviorSubject, Observable, filter, map, of, tap } from 'rxjs';
 import { fetch } from '../fetch.interface';
 
 @Injectable({
@@ -9,17 +9,17 @@ import { fetch } from '../fetch.interface';
 export class DataService {
 
   url: string;
-  urlCart: string;
 
   public productCount = new BehaviorSubject<number>(0);
 
   constructor(private httpClient: HttpClient) {
-    this.url = 'http://localhost:3000/products'; // Your API link here
-    this.urlCart = 'http://localhost:3000/cart'; // Your API link here for cart
+    this.url = 'https://anzori-pr.github.io/eCommerce/db.json'; // Your API link here
   }
 
   getData(): Observable<fetch[]> {
-    return this.httpClient.get<fetch[]>(this.url);
+    return this.httpClient.get<fetch>(this.url).pipe(
+      map(data => data.products)
+    );
   }
 
   getComputers(): Observable<fetch[]> {
@@ -46,8 +46,11 @@ export class DataService {
     );
   }
 
-  getViewProduct(id: string): Observable<fetch> {
-    return this.httpClient.get<fetch>(`${this.url}/${id}`);
+  getViewProduct(id: string): Observable<any> {
+    return this.getData().pipe(
+      map(products => products.find(product => product.id === id)),
+      filter(product => !!product) // Filter out undefined values
+    );
   }
 
   addToCart(id: string): Observable<any> {
@@ -58,10 +61,6 @@ export class DataService {
     this.productCount.next(cartItems.length);
 
     return of(null);
-  }
-
-  getAddToCartData(): Observable<fetch[]> {
-    return this.httpClient.get<fetch[]>(this.urlCart);
   }
 
   getCartProducts(ids: string[]): Observable<fetch[]> {
