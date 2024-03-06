@@ -1,11 +1,24 @@
-# Project
-Due to limitations, I am unable to deploy the `db.json` file. However, for visualization purposes, images are provided to showcase the content.
- 
-![image](https://github.com/Anzori-PR/eCommerce/assets/113595336/20bc9786-b106-47b3-95d1-95e471cae5b8)
+# eCommerce Website
 
-![image](https://github.com/Anzori-PR/eCommerce/assets/113595336/881f67ea-f04c-4bd0-8c27-a54abb4f50d8)
-![image](https://github.com/Anzori-PR/eCommerce/assets/113595336/75c7f34e-b87e-493d-bd94-be28a134849f)
+This is a simple eCommerce website project built with Angular. It features a front-end interface for browsing products, adding them to the cart, and managing the cart. The backend is simulated using JSON fake backend and localStorage is used to store cart items.
 
+## Features
+
+- Browse products by category
+- View product details
+- Add products to the cart
+- Remove products from the cart
+- Increment and decrement product quantity in the cart
+- Calculate total price of items in the cart
+- Responsive design for mobile and desktop screens
+
+## Technologies Used
+
+- Angular: Frontend framework
+- JSON Fake Backend: Simulated backend for product data
+- LocalStorage: Used for storing cart items locally
+- HTML/Tailwind css: Markup and styling
+- TypeScript: Programming language for Angular
 
 
 
