@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, map, tap } from 'rxjs';
+import { BehaviorSubject, Observable, map, of, tap } from 'rxjs';
 import { fetch } from '../fetch.interface';
 
 @Injectable({
@@ -50,13 +50,14 @@ export class DataService {
     return this.httpClient.get<fetch>(`${this.url}/${id}`);
   }
 
-  addToCart(id: string): Observable<fetch> {
-    return this.httpClient.post<fetch>(this.urlCart, { id }).pipe(
-      tap(() => {
-        // Increment product count when adding to cart
-        this.productCount.next(this.productCount.value + 1);
-      })
-    );
+  addToCart(id: string): Observable<any> {
+    let cartItems = JSON.parse(localStorage.getItem("cartItems") || '[]');
+    cartItems.push(id);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+    this.productCount.next(cartItems.length);
+
+    return of(null);
   }
 
   getAddToCartData(): Observable<fetch[]> {
@@ -69,8 +70,28 @@ export class DataService {
     );
   }
 
-  deleteCartItem(id: string): Observable<'id'> {
-    return this.httpClient.delete<'id'>(`${this.urlCart}/${id}`);
+  deleteCartItem(id: string): Observable<any> {
+    let cartItems = JSON.parse(localStorage.getItem("cartItems") || '[]');
+    const indexes = cartItems.reduce((acc: any[], itemId: string, index: any) => {
+      if (itemId === id) {
+        acc.push(index);
+      }
+      return acc;
+    }, []);
+  
+    // Remove items at indexes in reverse order to avoid index shift
+    indexes.reverse().forEach((index: any) => {
+      cartItems.splice(index, 1);
+    });
+  
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+  
+    // Emit a value to update the product count
+    this.productCount.next(cartItems.length);
+  
+    // Return an observable with no data
+    return of(null);
   }
+  
 
 }

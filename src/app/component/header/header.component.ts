@@ -33,17 +33,10 @@ export class HeaderComponent implements OnInit {
         this.ActiveRoute = this.router.url;
       });
 
-    this.service.getAddToCartData().subscribe(res => {
-      this.id = res.map(item => item.id);
-
-      this.service.getCartProducts(this.id).subscribe(products => {
-        // this.product = products.length;
-        this.service.productCount.subscribe(count => {
-          this.product = count + products.length;
-        });
-      });
-    })
-
+    const cartItems = JSON.parse(localStorage.getItem("cartItems") || '[]');
+    this.service.productCount.subscribe(count => {
+      this.product = count || cartItems.length;
+    });
 
   }
 

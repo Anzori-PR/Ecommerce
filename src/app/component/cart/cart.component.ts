@@ -10,93 +10,68 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 })
 export class CartComponent implements OnInit {
   cartItems: fetch[] = [];
-  ids: string[] = [];
   cartCounts: { [id: string]: number } = {};
-  wholeCount!: number;
   checkoutText: boolean = false;
   message!: string;
-
-  mdg = 'jello';
 
   faTrash = faTrash;
 
   constructor(private service: DataService) { }
 
   ngOnInit(): void {
-    this.service.getAddToCartData().subscribe(res => {
-      this.ids = res.map(item => item.id); // Extract IDs from objects
+    const ids: string[] = JSON.parse(localStorage.getItem("cartItems") || '[]');
+    this.service.getCartProducts(ids).subscribe(products => {
+      this.cartItems = products;
 
-      // Calculate counts for each product in the cart
-      this.ids.forEach(id => {
-        this.cartCounts[id] = (this.cartCounts[id] || 0) + 1;
-      });
-
-      this.service.getCartProducts(this.ids).subscribe(products => {
-        this.cartItems = products;
-
-        if(products.length < 1) {
-          this.message = "Cart is empty!"
-        }
+      if (products.length < 1) {
+        this.message = "Cart is empty!"
+      }
+      // Initialize cartCounts with counts of each item
+      this.cartItems.forEach(item => {
+        this.cartCounts[item.id] = 1; // Assuming each item initially has count 1
       });
     });
   }
 
   deleteProduct(id: string) {
-    const productCount = this.cartCounts[id];
-    for (let i = 0; i < productCount; i++) {
-      this.service.deleteCartItem(id).subscribe(() => {
-        this.cartItems = this.cartItems.filter(item => item.id !== id);
-        window.location.reload();
-      });
-    }
+    this.service.deleteCartItem(id).subscribe(() => {
+      this.cartItems = this.cartItems.filter(item => item.id !== id);
+      
+      localStorage.setItem("cartItems", JSON.stringify(this.cartItems.map(item => item.id)));
+    });
   }
-
 
   getTotalPrice(id: string): number {
-    const productCount = this.cartCounts[id];
-    let count = 0;
-    for (const item of this.cartItems) {
-      if (item.id === id) {
-        count += item.price * productCount;
-      }
-    }
-    
-    return count;
+    const productCount = this.cartCounts[id] || 0;
+    const item = this.cartItems.find(item => item.id === id);
+    return item ? item.price * productCount : 0;
   }
-
 
   getWholeTotalPrice(): number {
     let wholeTotal = 0;
-  
     this.cartItems.forEach(item => {
-      const productCount = this.cartCounts[item.id];
+      const productCount = this.cartCounts[item.id] || 0;
       wholeTotal += item.price * productCount;
     });
-  
     return wholeTotal;
   }
-  
-  
+
   add(id: string) {
     const item = this.cartItems.find(item => item.id === id);
-    const number = this.cartCounts[id];
-
     if (item && this.cartCounts[id] < item.stock) {
-        this.cartCounts[id] = number + 1;
+      this.cartCounts[id] = (this.cartCounts[id] || 0) + 1;
     }
   }
-  
-  minus(id: string) {
-    const item = this.cartItems.find(item => item.id === id);
-    const number = this.cartCounts[id];
 
-    if (item && this.cartCounts[id] > 1) {
-        this.cartCounts[id] = number - 1;
+  minus(id: string) {
+    if (this.cartCounts[id] > 1) {
+      this.cartCounts[id]--;
+    } else {
+      this.deleteProduct(id);
     }
   }
 
   checkout() {
     this.checkoutText = !this.checkoutText;
   }
-  
 }
